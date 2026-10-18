@@ -5,18 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>∞</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;overflow:hidden;height:100vh;width:100vw;display:flex;align-items:center;justify-content:center;font-family:sans-serif}
-#container{position:relative;width:100%;height:100%;max-width:500px;max-height:800px}
-.word{position:absolute;font-weight:bold;white-space:nowrap;will-change:transform;animation:float 3s ease-in-out infinite alternate;user-select:none}
-@keyframes float{0%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-48%) scale(1.08)}}
-#btn{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);color:white;padding:14px 28px;border-radius:30px;font-size:16px;cursor:pointer;z-index:10}
+body{margin:0;background:#000;overflow:hidden;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center}
+.word{position:absolute;font-weight:bold;white-space:nowrap;transform:translate(-50%,-50%)}
+#btn{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1a1a1a;border:1px solid #333;color:white;padding:14px 28px;border-radius:30px;font-size:16px;z-index:999}
 </style>
 </head>
 <body>
-<div id="container"></div>
 <button id="btn">▶️ Müziği Başlat</button>
-<audio id="audio" loop><source src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_fbd14dd0a6.mp3?filename=romantic-piano-124649.mp3" type="audio/mpeg"></audio>
-
+<audio id="audio" loop><source src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_fbd14dd0a6.mp3" type="audio/mpeg"></audio>
 <script>
-const loves=["Love","Amour","Amor","Liebe","Aşk","Qalb","Ishq","Mohabbat","Pyaar","Kaadhal","Mamor","Cinta","Sayang","Mahal","Aishiteru","Ai","Sarang","Obich","Milujem","Ljubav","Dragoste","Te iubesc","Volim","Kjærlighed","Elsker","Rakkaus","Ást","Grá","Caru","Ser","Elska","Lubov","Lyubov","Kärlek","Eros","Ahava","Hub","Ishq","Prem","Pyar","Mila","Milost","Liefde","Lieben","Amare","Amor","Querida","Te amo","Je t'aime","Ich liebe dich","Ti amo","Ya habibi","Saranghae","Aishite","Wǒ ài nǐ","Mellék","U
+const words=["Love","Amour","Amor","Liebe","Aşk","Ishq","Mohabbat","Pyaar","Cinta","Mahal","Aishiteru","Ai","Sarang","Obich","Milujem","Ljubav","Te iubesc","Volim","Elsker","Rakkaus","Lubov","Kärlek","Ahava","Hub","Prem","Mila","Milost","Je t'aime","Ich liebe dich","Ti amo","Ya habibi","Hayati","Qalbi","Canım","Sevgi","Amore","Querida","Mon amour","My love","Habibi","Qalb","Jaan","Dil","Rooh","Saranghae","Aishite","Wǒ ài nǐ","Upendo","My heart","My soul","Forever","Always","Eternal","Infinity","Sevda","Aşkitom","Love you","Mwah","Cham","Gur","Pyaar","Ishq","Mohabbat","Kaadhal","Kjærlighed","Liefde","Elska","Ást","Grá","Caru","Ser","Amare","Te amo","J'adore"];
+const cx=window.innerWidth/2;
+const cy=window.innerHeight/2 - 40;
+const size=Math.min(window.innerWidth, window.innerHeight)*0.33;
+
+words.forEach((t,i)=>{
+  const angle=(i/words.length)*Math.PI*2;
+  // sonsuzluk formülü
+  const tt=angle*2;
+  const x=cx + size * Math.cos(tt) / (1 + Math.pow(Math.sin(tt),2)) * 1.4;
+  const y=cy + size * Math.cos(tt)*Math.sin(tt) / (1 + Math.pow(Math.sin(tt),2)) * 0.7;
+
+  const d=document.createElement('div');
+  d.className='word';
+  d.innerText=t;
+  d.style.left=x+'px';
+  d.style.top=y+'px';
+  d.style.color=`hsl(${300+Math.random()*80},100%,70%)`;
+  d.style.fontSize=(12+Math.random()*10)+'px';
+  d.style.opacity=0.9;
+  document.body.appendChild(d);
+});
+
+const btn=document.getElementById('btn'), aud=document.getElementById('audio');
+let p=false;
+btn.onclick=()=>{if(!p){aud.play();btn.textContent='⏸️ Durdur';p=true}else{aud.pause();btn.textContent='▶️ Müziği Başlat';p=false}}
+</script>
+</body>
+</html>
