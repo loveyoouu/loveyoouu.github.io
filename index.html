@@ -3,61 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>love_you.html</title>
+<title>love_you.html - loveyoouu</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0a;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:monospace;overflow:hidden;position:relative}
-body::before{content:"function changeShortParam() { shortcode: } .callcode... .model... .tab_count... .model_storage... .vc_clone_index... .tag... .tab_count...";position:absolute;top:0;left:0;width:100%;height:100%;color:#1a1a1a;font-size:14px;line-height:20px;white-space:pre-wrap;word-break:break-all;opacity:0.5;z-index:0}
-.top-tabs{position:relative;z-index:2;display:flex;gap:60px;color:#fff;margin-bottom:14px;font-size:14px;opacity:0.9}
-.top-tabs span:nth-child(2){color:#aaa}
-.card{position:relative;z-index:2;width:92vw;max-width:380px;height:520px;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.6);display:flex;flex-direction:column}
-.stage{flex:1;position:relative;background:#fff;overflow:hidden}
-.character{position:absolute;left:14px;bottom:70px;width:90px;height:110px;z-index:3}
-.big-heart-area{position:absolute;right:10px;top:14px;width:240px;height:300px}
-.mini-heart{position:absolute;width:14px;height:14px;background:#e84c6a;transform:rotate(-45deg);opacity:0;animation:pop 0.4s forwards}
-.mini-heart::before,.mini-heart::after{content:"";position:absolute;width:14px;height:14px;background:#e84c6a;border-radius:50%}
-.mini-heart::before{top:-7px;left:0}
-.mini-heart::after{left:7px;top:0}
-.mini-heart.light{background:#f4a7b5}
-.mini-heart.light::before,.mini-heart.light::after{background:#f4a7b5}
-@keyframes pop{0%{transform:rotate(-45deg) scale(0)} 80%{transform:rotate(-45deg) scale(1.2)} 100%{transform:rotate(-45deg) scale(1);opacity:1}}
-.fly-heart{position:absolute;width:12px;height:12px;background:#e84c6a;transform:rotate(-45deg);z-index:5;pointer-events:none}
-.fly-heart::before,.fly-heart::after{content:"";position:absolute;width:12px;height:12px;background:#e84c6a;border-radius:50%}
-.fly-heart::before{top:-6px;left:0}
-.fly-heart::after{left:6px;top:0}
-.love-text{position:absolute;bottom:36px;left:0;width:100%;text-align:center;font-family:'Georgia',serif;color:#c94a5a;font-size:20px;letter-spacing:0.5px;opacity:0;transform:translateY(10px);transition:all 0.8s}
-.love-text.show{opacity:1;transform:translateY(0)}
-.code-box{height:142px;background:#111b2e;border-top:1px solid #eee;padding:12px 14px;font-size:11px;line-height:14px;color:#a9b7d0;position:relative}
-.code-box .dots{display:flex;gap:6px;margin-bottom:8px}
-.code-box .dot{width:9px;height:9px;border-radius:50%}
-.dot.r{background:#ff5f56}.dot.y{background:#ffbd2e}.dot.g{background:#27c93f}
-.code-title{position:absolute;right:12px;top:12px;font-size:10px;color:#6b7a94}
-.k{color:#ff7ab2}.v{color:#82aaff}.s{color:#c3e88d}.p{color:#8b93a5}
-#musicBtn{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10;background:#fff;border:none;padding:10px 18px;border-radius:20px;font-size:13px;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+body{background:#0a0a0a;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;position:relative;font-family:monospace}
+body::before{content:"Html Css Js function changeShortParam(){ shortcode: } .callcode{ } .tab_count .model_storage .vc_clone_index tag_code... love you... I Love You...";position:absolute;inset:0;color:#1a1a1a;font-size:13px;line-height:18px;white-space:pre-wrap;word-break:break-all;opacity:.6;z-index:0}
+.top{position:relative;z-index:2;display:flex;gap:70px;color:#fff;font-size:14px;margin-bottom:14px}
+.top span:nth-child(2){color:#8a8a8a}
+.card{position:relative;z-index:2;width:92vw;max-width:380px;height:560px;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.8);display:flex;flex-direction:column}
+.stage{flex:1;position:relative;background:#fff}
+.char{position:absolute;left:12px;bottom:68px;width:95px;height:120px}
+.char svg{width:100%;height:100%}
+.char path,.char circle{fill:none;stroke:#000;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:400;stroke-dashoffset:400}
+.draw{animation:draw .7s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.heart-area{position:absolute;right:10px;top:10px;width:235px;height:330px}
+.real-heart{position:absolute;opacity:0}
+.real-heart .h{width:14px;height:14px;background:#e84866;transform:rotate(-45deg);position:relative}
+.real-heart .h::before,.real-heart .h::after{content:"";position:absolute;width:14px;height:14px;background:#e84866;border-radius:50%}
+.real-heart .h::before{top:-7px;left:0}
+.real-heart .h::after{left:7px;top:0}
+.real-heart.light .h,.real-heart.light .h::before,.real-heart.light .h::after{background:#f6a8b6}
+.fly{position:absolute;z-index:10;pointer-events:none}
+.fly .h{width:12px;height:12px;background:#e84866;transform:rotate(-45deg);position:relative}
+.fly .h::before,.fly .h::after{content:"";position:absolute;width:12px;height:12px;background:#e84866;border-radius:50%}
+.fly .h::before{top:-6px;left:0}.fly .h::after{left:6px;top:0}
+.love{position:absolute;bottom:30px;left:0;width:100%;text-align:center;font-family:Georgia,serif;color:#c94a5a;font-size:21px;letter-spacing:.3px;opacity:0;transform:translateY(8px);transition:all .9s ease}
+.love.show{opacity:1;transform:translateY(0)}
+.code{height:144px;background:#111c33;padding:12px 14px;font-size:11px;line-height:14px;color:#a8b8d4;border-top:1px solid #eee}
+.dots{display:flex;gap:6px;margin-bottom:8px}
+.dot{width:9px;height:9px;border-radius:50%}
+.r{background:#ff5f56}.y{background:#ffbd2e}.g{background:#27c93f}
+.k{color:#ff7ab2}.v{color:#82aaff}.s{color:#c3e88d}.p{color:#6c7a96}
 </style>
 </head>
 <body>
-<div class="top-tabs"><span>Html</span><span>Css</span><span>Js</span></div>
+<div class="top"><span>Html</span><span>Css</span><span>Js</span></div>
 <div class="card">
 <div class="stage" id="stage">
-<div class="character">
-<svg viewBox="0 0 90 110" width="90" height="110">
-<circle cx="35" cy="18" r="16" fill="none" stroke="#000" stroke-width="2.2"/>
-<path d="M15 35 Q35 45 55 35 Q60 60 50 75 Q35 85 20 75 Q10 60 15 35" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M48 48 Q62 42 68 50" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
-<text x="62" y="52" font-size="9" fill="#e84c6a">❤</text>
-<text x="68" y="46" font-size="7" fill="#e84c6a">❤</text>
+<div class="char">
+<svg viewBox="0 0 100 120">
+<circle id="c1" cx="38" cy="20" r="15"/>
+<path id="c2" d="M18 36 Q38 46 58 36 Q62 62 52 76 Q38 88 22 76 Q12 62 18 36"/>
+<path id="c3" d="M22 55 Q10 60 14 68"/>
+<path id="c4" d="M50 50 Q66 44 74 52"/>
 </svg>
 </div>
-<div class="big-heart-area" id="heartArea"></div>
-<div class="love-text" id="loveText">I Love You</div>
+<div class="heart-area" id="area"></div>
+<div class="love" id="love">I Love You</div>
 </div>
-<div class="code-box">
+<div class="code">
 <div class="dots"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div></div>
-<div class="code-title">style.css</div>
 <div><span class="k">.love</span> <span class="k">.block</span> <span class="k">heart</span> {</div>
-<div>&nbsp;&nbsp;<span class="v">width</span>: <span class="s">40px</span>;</div>
-<div>&nbsp;&nbsp;<span class="v">height</span>: <span class="s">40px</span>;</div>
+<div>&nbsp;&nbsp;<span class="v">width</span>: <span class="s">48px</span>;</div>
+<div>&nbsp;&nbsp;<span class="v">height</span>: <span class="s">48px</span>;</div>
 <div>&nbsp;&nbsp;<span class="v">position</span>: <span class="s">absolute</span>;</div>
 <div>&nbsp;&nbsp;<span class="v">background</span>:<span class="s">url("heart.png")</span>;</div>
 <div>&nbsp;&nbsp;<span class="v">background-size</span>: <span class="s">contain</span>;</div>
@@ -66,47 +65,69 @@ body::before{content:"function changeShortParam() { shortcode: } .callcode... .m
 <div>}</div>
 </div>
 </div>
-<button id="musicBtn">▶️ Müziği Başlat</button>
-<audio id="audio" loop src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_fbd14dd0a6.mp3"></audio>
 <script>
-const heartMap=[
-"0011011001100","0111111111110","1111111111111","1111111111111","1111111111111","0111111111110","0011111111100","0001111111000","0000111110000","0000011100000","0000001000000"
-];
-const area=document.getElementById('heartArea');
-const stage=document.getElementById('stage');
-const positions=[];
-const cell=14, gap=1;
-heartMap.forEach((row,r)=>{
-  [...row].forEach((c,cc)=>{
-    if(c==='1') positions.push({x:cc*(cell+gap), y:r*(cell+gap), idx:positions.length});
-  })
+// 1 - karakter yavaş çizim
+['c1','c2','c3','c4'].forEach((id,i)=>{
+  setTimeout(()=>document.getElementById(id).classList.add('draw'), i*600)
 });
-positions.sort((a,b)=>b.x-a.x); // sağdan sola videodaki gibi
 
-let i=0;
+// 2 - büyük kalp haritası
+const map=[
+"0011011001100",
+"0111111111110",
+"1111111111111",
+"1111111111111",
+"1111111111111",
+"0111111111110",
+"0011111111100",
+"0001111111000",
+"0000111110000",
+"0000011100000",
+"0000001000000"
+];
+const pos=[];
+map.forEach((r,ri)=>[...r].forEach((c,ci)=>{ if(c==='1') pos.push({x:ci*15,y:ri*15}) }));
+pos.sort((a,b)=>(b.x+b.y)-(a.x+a.y));
+
+const area=document.getElementById('area');
+const stage=document.getElementById('stage');
+let idx=0;
+
 function spawn(){
-  if(i>=positions.length){document.getElementById('loveText').classList.add('show');return}
-  const pos=positions[i];
-  // uçan kalp
+  if(idx>=pos.length){
+    document.getElementById('love').classList.add('show');
+    return;
+  }
+  const p=pos[idx];
   const fly=document.createElement('div');
-  fly.className='fly-heart';
-  fly.style.left='48px'; fly.style.top='58px';
+  fly.className='fly';
+  fly.innerHTML='<div class="h"></div>';
+  fly.style.left='70px';
+  fly.style.top='60px';
   stage.appendChild(fly);
-  const targetX=140+pos.x, targetY=10+pos.y;
-  fly.animate([{left:'48px',top:'58px'},{left:targetX+'px',top:targetY+'px'}],{duration:300,easing:'cubic-bezier(.4,0,.2,1)'}).onfinish=()=>{
+  const tx=145+p.x, ty=8+p.y;
+  fly.animate([
+    {left:'70px', top:'60px', transform:'scale(.4) rotate(0deg)', opacity:1},
+    {left:tx+'px', top:ty+'px', transform:'scale(1.2) rotate(20deg)', opacity:1}
+  ],{duration:420, easing:'cubic-bezier(.25,.8,.25,1)'}).onfinish=()=>{
     fly.remove();
     const h=document.createElement('div');
-    h.className='mini-heart'+(Math.random()>0.7?' light':'');
-    h.style.left=pos.x+'px'; h.style.top=pos.y+'px';
-    h.style.animationDelay=(Math.random()*0.1)+'s';
+    h.className='real-heart'+(Math.random()>.6?' light':'');
+    h.style.left=p.x+'px';
+    h.style.top=p.y+'px';
+    h.innerHTML='<div class="h"></div>';
+    h.style.transition='all .35s cubic-bezier(.34,1.56,.64,1)';
+    h.style.transform='scale(.2)';
     area.appendChild(h);
+    requestAnimationFrame(()=>{
+      h.style.opacity='1';
+      h.style.transform='scale(1)';
+    });
   };
-  i++; setTimeout(spawn,70);
+  idx++;
+  setTimeout(spawn, 75);
 }
-setTimeout(spawn,600);
-
-const btn=document.getElementById('musicBtn'), aud=document.getElementById('audio'); let pl=false;
-btn.onclick=()=>{if(!pl){aud.play();btn.textContent='⏸️ Durdur';pl=true}else{aud.pause();btn.textContent='▶️ Müziği Başlat';pl=false}}
+setTimeout(spawn, 2600);
 </script>
 </body>
 </html>
